@@ -1,0 +1,33 @@
+using System;
+
+namespace lab3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Введiть координати точки M(x,y)");
+            Console.Write("x = ");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.Write("y = ");
+            int y = Convert.ToInt32(Console.ReadLine());
+            string q;
+
+            if(x == y && x == 0) q = "центрi";
+
+            else if (x +y <= 12 && x+y >= -12 && x>=-12 && y>=-12 && x <= 12 && y <= 12)
+            {
+                if((y>=0 && x>=0) || (y<=0 && x <= 0))q = "1 чвертi";
+
+                else q = "2 чвертi";
+            }
+
+            else if(x >=0) q = "4 чвертi";
+
+            else q = "3 чвертi";
+
+            Console.WriteLine($"Точка лежить в {q}");
+
+        }
+    }
+}
